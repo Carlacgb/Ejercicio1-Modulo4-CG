@@ -22,35 +22,35 @@ useEffect(() =>{
     },
     {
       id:2,
-      nombre:'Doctor 2',
+      nombre:'Fuljencio Bautista',
       experiencia: '3 años',
       descripcion: 'Descripcion del doctor 2 que tiene 3 años de experiencia',
       especialidad: 'Ginecología'
     },
     {
       id:3,
-      nombre:'Doctor 3',
+      nombre:'Renata Salvador',
       experiencia:' 5 años',
       descripcion:'Descripcion del doctor 3 que tiene 5 años de experiencia y sabemos que no tiene experiencia',
       especialidad: 'Nutrición'
     },
     {
       id:4,
-      nombre:'Doctor 4',
+      nombre:'Ricardo Lagos',
       experiencia: '9 años',
       descripcion: 'Descripcion del doctor 4 que tiene 9 años de experiencia',
       especialidad: 'Psicología',
     },
     {
       id:5,
-      nombre:'Doctor 5',
+      nombre:'Hetelvira Puentes',
       experiencia:'6 años',
       descripcion:'Descripcion del doctor 5 que tiene 6 años de experiencia y sabemos que no tiene experiencia',
       especialidad: 'Cardiología',
     },
     {
       id:6,
-      nombre:'Doctor 6',
+      nombre:'Lulú Pérez',
       experiencia: '10 años',
       descripcion: 'Descripcion del doctor 6 que tiene 10 años de experiencia',
       especialidad: 'Broncopulmonar',
@@ -66,19 +66,19 @@ useEffect(() =>{
 
   return (
     <>
-      <h3 className='fs-1'>Nuestros Doctores</h3>
+      <h3 className='p-3 mb-2 bg-info text-dark'>Nuestros Doctores</h3>
       <section className="grillagrip">
         {doctores.map(({id, nombre, experiencia, descripcion, especialidad}) => (
           <DoctorCard key={id} doctor={nombre} experiencia={experiencia} descripcion={descripcion} especialidad={especialidad} />
         ))}
       </section>
-      <h3>Servicios Medicos</h3>
+      <h3 className='p-3 mb-2 bg-info text-dark'>Servicios Medicos</h3>
       <section className="grillaflex">
        {servicios.map((servicio, index) => (
         <ServiceList key={index} servicio={servicio} />
        ))} 
       </section>
-      <h3>Seleccione su Cita</h3>
+      <h3 className='p-3 mb-2 bg-info text-dark'>Seleccione su Cita</h3>
       <section className='container'>
         <AppointmentForm doctores={doctores}/>
       </section>
